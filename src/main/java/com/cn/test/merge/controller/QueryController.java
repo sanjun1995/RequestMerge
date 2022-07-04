@@ -24,6 +24,7 @@ public class QueryController {
     public void singleQuery(){
         for (int i = 0; i <1000 ; i++) {
             Item item = itemService.queryByCode(i + "");
+            System.out.println(item.getId());
         }
     }
 
@@ -31,6 +32,7 @@ public class QueryController {
     @RequestMapping("/singleQuery")
     public void singleQuery2(){
         Item item = itemService.queryByCode("1");
+        System.out.println(item.getId());
     }
 
     @ResponseBody
